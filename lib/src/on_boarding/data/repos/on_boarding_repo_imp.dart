@@ -14,16 +14,23 @@ class OnBoardingRepoImpl implements OnBoardingRepo {
   ResultFuture<void> cacheFirstTimer() async {
     try {
       await _localDataSource.cacheFirstTimer();
-      // Return Right(null);
       return const Right(null);
     } on CacheException catch (e) {
-      return Left(CacheFailure(message: e.message, statusCode: e.statusCode));
+      return Left(
+        CacheFailure(message: e.message, statusCode: e.statusCode as String),
+      );
     }
   }
 
   @override
-  ResultFuture<bool> checkIfUserIsFirstTimer() {
-    // TODO: implement checkIfUserIsFirstTimer
-    throw UnimplementedError();
+  ResultFuture<bool> checkIfUserIsFirstTimer() async {
+    try {
+      final result = await _localDataSource.checkIfUserIsFirstTimer();
+      return Right(result);
+    } on CacheException catch (e) {
+      return Left(
+        CacheFailure(message: e.message, statusCode: e.statusCode as String),
+      );
+    }
   }
 }

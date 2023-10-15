@@ -21,8 +21,8 @@ void main() {
 
   test('should call the [OnboardingRepo.cacheFirsTimer]', () async {
     when(() => repo.cacheFirstTimer()).thenAnswer(
-      (_) async => Left(
-        ServerFailure(message: 'Unknown Error Occured', statusCode: 500),
+      (_) async => const Left(
+        ServerFailure(message: 'Unknown Error Occured', statusCode: '500'),
       ),
     );
 
@@ -32,8 +32,8 @@ void main() {
     expect(
       result,
       equals(
-        Left<Failure, dynamic>(
-          ServerFailure(message: 'Unknown Error Occured', statusCode: 500),
+        const Left<Failure, dynamic>(
+          ServerFailure(message: 'Unknown Error Occured', statusCode: '500'),
         ),
       ),
     );

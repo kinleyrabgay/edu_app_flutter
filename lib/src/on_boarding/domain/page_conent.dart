@@ -1,3 +1,5 @@
+// ignore_for_file: lines_longer_than_80_chars
+
 import 'package:edu_app/core/res/media_res.dart';
 import 'package:equatable/equatable.dart';
 
@@ -28,7 +30,7 @@ class PageContent extends Equatable {
   const PageContent.third()
       : this(
           image: MediaRes.casualMeditationScience,
-          title: 'Easy to join lesson',
+          title: 'Easy to join lesson & learn',
           description:
               "This is the first online education platform designed by the world's top professor",
         );

@@ -51,8 +51,8 @@ void main() {
 
         expect(
           result,
-          Left<CacheFailure, dynamic>(
-            CacheFailure(message: 'Insufficient storage', statusCode: 500),
+          const Left<CacheFailure, dynamic>(
+            CacheFailure(message: 'Insufficient storage', statusCode: '500'),
           ),
         );
         verify(() => localDataSource.cacheFirstTimer());

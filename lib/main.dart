@@ -1,9 +1,12 @@
 import 'package:edu_app/core/res/colours.dart';
 import 'package:edu_app/core/res/fonts.dart';
+import 'package:edu_app/core/services/injection_container.dart';
 import 'package:edu_app/core/services/routes.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await init();
   runApp(const MyApp());
 }
 
@@ -18,6 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // Theming
+        scaffoldBackgroundColor: Colors.white,
         useMaterial3: true,
         fontFamily: Fonts.poppins,
         visualDensity: VisualDensity.adaptivePlatformDensity,
