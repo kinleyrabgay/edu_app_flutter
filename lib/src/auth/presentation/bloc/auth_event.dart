@@ -34,7 +34,7 @@ class SignUpEvent extends AuthEvent {
 }
 
 class ForgotPasswordEvent extends AuthEvent {
-  const ForgotPasswordEvent({required this.email});
+  const ForgotPasswordEvent(this.email);
 
   final String email;
 
@@ -43,14 +43,18 @@ class ForgotPasswordEvent extends AuthEvent {
 }
 
 class UpdateUserEvent extends AuthEvent {
-  const UpdateUserEvent({required this.action, required this.userDate})
-      : assert(
-          userDate is String || userDate is File,
-          '[UserData] must be either String or File ',
+  UpdateUserEvent({
+    required this.action,
+    required this.userData,
+  }) : assert(
+          userData is String || userData is File,
+          '[userData] must be either a String or a File, but '
+          'was ${userData.runtimeType}',
         );
 
   final UpdateUserAction action;
-  final dynamic userDate;
+  final dynamic userData;
+
   @override
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [action, userData];
 }
