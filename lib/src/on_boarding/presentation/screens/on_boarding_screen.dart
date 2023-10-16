@@ -20,6 +20,7 @@ class OnboardingScreen extends StatefulWidget {
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
   final pageController = PageController();
+
   @override
   void initState() {
     super.initState();
@@ -37,7 +38,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             if (state is OnBoardStatus && !state.isFirstTime) {
               Navigator.pushReplacementNamed(context, '/home');
             } else if (state is UserCached) {
-              // TODO(User-Cached-Handler): Push to the appropriate screen
+              Navigator.pushReplacementNamed(context, '/');
             }
           },
           builder: (context, state) {
