@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "395975108924",
+    "firebase_url": "https://education-app-16475-default-rtdb.firebaseio.com",
+    "project_id": "education-app-16475",
+    "storage_bucket": "education-app-16475.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395975108924:android:0ac176fe39b8feede75639",
+        "android_client_info": {
+          "package_name": "com.d"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_QF4Z7g6PhEBfrAM81SF0X4lBXDjFCus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395975108924:android:306d48f45aeff7d4e75639",
+        "android_client_info": {
+          "package_name": "com.example.edu_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_QF4Z7g6PhEBfrAM81SF0X4lBXDjFCus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395975108924:android:f5d9f3adaabf0b15e75639",
+        "android_client_info": {
+          "package_name": "com.kinley.education_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_QF4Z7g6PhEBfrAM81SF0X4lBXDjFCus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
