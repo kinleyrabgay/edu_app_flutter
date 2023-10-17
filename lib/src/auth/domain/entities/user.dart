@@ -44,11 +44,22 @@ class LocalUser extends Equatable {
 
   // EQUATE TWO USER (HOW TO KNOW WHEN TWO USERS ARE EQUAL?)
   @override
-  List<Object?> get props => [uid, email];
+  List<Object?> get props => [
+        uid,
+        email,
+        profilePic,
+        bio,
+        points,
+        fullName,
+        groupIds,
+        enrolledCourseIds,
+        followers,
+        following,
+      ];
 
   @override
   String toString() {
-    return 'LocalUser{uid: $uid, email: $email, bio: $bio, points: $points, fullName: $fullName }';
+    return 'LocalUser{uid: $uid, email: $email, bio: $bio, points: $points, fullName: $fullName, profilePic: $profilePic }';
   }
 
   // Empty version for test

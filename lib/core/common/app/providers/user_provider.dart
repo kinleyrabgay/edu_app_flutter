@@ -10,7 +10,6 @@ class UserProvider extends ChangeNotifier {
     if (_user != user) _user = user;
   }
 
-  // Setter
   set user(LocalUserModel? user) {
     if (_user != user) {
       _user = user;
